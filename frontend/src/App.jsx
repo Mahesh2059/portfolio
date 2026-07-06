@@ -29,10 +29,9 @@ function App() {
       try {
 
         // EXPERIENCE DATA
-     const expResponse = await axios.get(
-  'http://127.0.0.1:5000/api/experience'
+const expResponse = await axios.get(
+  `${API_URL}/api/experience`
 );
-
         setExperience(expResponse.data);
 
         // SKILLS DATA
