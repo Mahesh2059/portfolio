@@ -7,7 +7,7 @@ const cors = require('cors');
 require('dotenv').config();
 
 const Experience = require('./models/Experience');
-const Message = require('./models/Message');
+const Message = require('./models/message');
 const Skill = require('./models/Skill');
 const Project = require('./models/Project.js');
 
@@ -15,7 +15,7 @@ const app = express();
 
 // MIDDLEWARE
 app.use(cors({
-    origin: "http://localhost:5173"
+    origin: process.env.CLIENT_URL || "http://localhost:5173"
 }));
 
 app.use(express.json());
