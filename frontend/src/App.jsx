@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import './App.css';
 
+const API_URL = import.meta.env.VITE_API_URL || 'http://127.0.0.1:5000';
+
 function App() {
 
   // STATES 
@@ -27,17 +29,17 @@ function App() {
       try {
 
         // EXPERIENCE DATA
-        const expResponse = await axios.get(
-          'http://127.0.0.1:5000/api/experience'
-        );
+     const expResponse = await axios.get(
+  'http://127.0.0.1:5000/api/experience'
+);
 
         setExperience(expResponse.data);
 
         // SKILLS DATA
-        const skillResponse = await axios.get(
-          'http://127.0.0.1:5000/api/skills'
-        );
-            const proj = await axios.get('http://127.0.0.1:5000/api/projects');
+    const skillResponse = await axios.get(
+  `${API_URL}/api/skills`
+);
+    const proj = await axios.get(`${API_URL}/api/projects`);
         setProjects(proj.data);
 
         setSkills(skillResponse.data);
@@ -75,10 +77,10 @@ function App() {
 
     try {
 
-      await axios.post(
-        "http://127.0.0.1:5000/api/message",
-        formData
-      );
+     await axios.post(
+  `${API_URL}/api/message`,
+  formData
+);
 
       alert("Message Sent Successfully");
 
