@@ -503,13 +503,13 @@ const expResponse = await axios.get(
       <h3>Get in Touch</h3>
 
       <p>📧 Email</p>
-      <span>maheshdevkota@example.com</span>
+      <span>maheshdevkota45@example.com</span>
 
       <p>📍 Location</p>
       <span>Jumla, Nepal</span>
 
       <p>📞 Phone</p>
-      <span>+977</span>
+      <span>9866219972</span>
 
       <div className="social-links">
 
