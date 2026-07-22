@@ -117,7 +117,7 @@ const expResponse = await axios.get(
     </ul>
    <button 
   className="resume-btn" 
-  onClick={() => window.open('/Mahesh-cv.pdf', '_blank')}
+  onClick={() => window.open('/resume.pdf', '_blank')}
 >
   Resume
 </button>
