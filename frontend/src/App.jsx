@@ -398,13 +398,13 @@ const expResponse = await axios.get(
                 Code
               </a>
 
-              {/* <a
+              <a
                 href={project.live}
                 target="_blank"
                 rel="noreferrer"
               >
                 Live Demo
-              </a> */}
+              </a>
 
             </div>
 
